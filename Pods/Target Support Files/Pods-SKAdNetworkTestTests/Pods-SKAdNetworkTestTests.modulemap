@@ -1,0 +1,6 @@
+framework module Pods_SKAdNetworkTestTests {
+  umbrella header "Pods-SKAdNetworkTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
