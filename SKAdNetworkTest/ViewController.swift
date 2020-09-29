@@ -50,8 +50,6 @@ class ViewController: UIViewController {
         }
     }
     
-    //TODO: Track Event EXAMPLE for when Branch SDK
-    
     @IBAction func registration(sender: UIButton){
         
         // With Branch SDK, updateConversionValue is automatically called if there is a mapping in the Dashboard setup for that event.
