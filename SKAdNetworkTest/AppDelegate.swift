@@ -11,9 +11,6 @@ import AppTrackingTransparency
 import AdSupport
 import Branch
 
-// Info.plist SkAdNetworkIdentifier: Contact the ad network to learn their ad network identifier. Include this key, and the value of the ad network identifier as a string, as a dictionary in the SKAdNetworkItems key.
-
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
