@@ -16,23 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // In the SKAdNetwork Config section of the Branch dashboard, select the YES radio button to have the Branch SDK handle all calls to SKAdNetwork.
-        
-        // Do NOT opt-in if you decide to:
-        
-        // 1. Integrate directly with SKAdNetwork and call the SKAdNetwork functions natively.
-        // 2.Use another 3rd party library to handle your app's interactions with SKAdNetwork.
         Branch.getInstance().initSession(launchOptions: launchOptions) { (params, error) in
             // do stuff with deep link data (nav to page, display content, etc)
             print(params as? [String: AnyObject] ?? {})
         }
         
+        // Do NOT opt-in if you decide to:
+        
+        // 1. Integrate directly with SKAdNetwork and call the SKAdNetwork functions natively.
+        // 2.Use another 3rd party library to handle your app's interactions with SKAdNetwork.
+        
         // SKAdNetwork Integration Bare Bones - Without Branch SDK
         // Call registerAppForAdNetworkAttribution to generate an Install Notification. This notification is cryptographically signed data from Apple, which validates that a user installed and launched this app as a resut of an ad.
         
+        SKAdNetwork.registerAppForAdNetworkAttribution()
         // From here, one of 2 things will happen:
         // 1) Either the conversion value will be updated when the User completes another action OR
         // 2) Timer will expire and a postback will be sent
-        SKAdNetwork.registerAppForAdNetworkAttribution()
         
         return true
     }
