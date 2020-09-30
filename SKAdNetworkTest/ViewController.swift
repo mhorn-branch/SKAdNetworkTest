@@ -6,8 +6,12 @@
 //
 
 import UIKit
+
+// StoreKit - to call updateConversionValue
 import StoreKit
+// AppTrackingTransparency - to request tracking authoization or identify the status of the user's selection/access to IDFA
 import AppTrackingTransparency
+// AdSupport - to retrieve IDFA
 import AdSupport
 import Branch
 

@@ -6,9 +6,8 @@
 //
 
 import UIKit
+// StoreKit used to access SKAdNetwork object to make registerAppForAdNetworkAttribution call explicitly
 import StoreKit
-import AppTrackingTransparency
-import AdSupport
 import Branch
 
 @main
